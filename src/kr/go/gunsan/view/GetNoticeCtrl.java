@@ -31,7 +31,7 @@ public class GetNoticeCtrl extends HttpServlet {
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("dto", dto);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/notice/noticeDetail.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeDetail.jsp");
 		view.forward(request, response);
 	}
 

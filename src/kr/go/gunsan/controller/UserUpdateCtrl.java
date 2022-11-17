@@ -63,9 +63,9 @@ public class UserUpdateCtrl extends HttpServlet {
 		suc = dao.updateUser(user);
 		
 		if(suc>=1){
-			response.sendRedirect(request.getContextPath());
+			response.sendRedirect("/");
 		} else { 
-			response.sendRedirect("request.getContextPath()/GetUserDetailCtrl.do?id"+id);
+			response.sendRedirect("UserInfoCtrl");
 		}
 	}
 

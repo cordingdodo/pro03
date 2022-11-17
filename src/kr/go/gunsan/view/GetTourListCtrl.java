@@ -32,7 +32,7 @@ public class GetTourListCtrl extends HttpServlet {
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("list", tourList);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/tour/tourList.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("./tour/tourlist.jsp");
 		view.forward(request, response);
 	}
 

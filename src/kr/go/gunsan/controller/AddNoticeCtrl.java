@@ -37,7 +37,7 @@ public class AddNoticeCtrl extends HttpServlet {
 		if(cnt>=1) {
 			response.sendRedirect("GetNoticeListCtrl.do");
 		} else {
-			response.sendRedirect("notice/addNotice.jsp");
+			response.sendRedirect("./notice/addNotice.jsp");
 		}
 	}
 }

@@ -29,7 +29,7 @@ public class GetUserListCtrl extends HttpServlet {
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("list", userList);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/user/userList.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/userList.jsp");
 		view.forward(request, response);
 	}
 

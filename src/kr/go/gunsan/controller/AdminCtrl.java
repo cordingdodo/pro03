@@ -17,7 +17,7 @@ public class AdminCtrl extends HttpServlet {
 		String user = "admin";
 		
 		request.setAttribute("admin", user);
-		RequestDispatcher view = request.getRequestDispatcher("/admin/admin.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/admin/admin.jsp");
 		view.forward(request, response);
 	}
 

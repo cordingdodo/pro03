@@ -31,7 +31,7 @@ public class GetNoticeListCtrl extends HttpServlet {
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("list", notiList);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/notice/noticeList.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeList.jsp");
 		view.forward(request, response);
 	}
 }

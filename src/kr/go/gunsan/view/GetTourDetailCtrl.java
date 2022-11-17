@@ -34,7 +34,7 @@ public class GetTourDetailCtrl extends HttpServlet {
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		request.setAttribute("dto", dto);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/tour/tourDetail.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("./tour/tourDetail.jsp");
 		view.forward(request, response);
 	}
 
