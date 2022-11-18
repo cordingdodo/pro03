@@ -6,8 +6,8 @@
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
 		  <div class="navbar-brand">
-		    <a class="navbar-item" id="logo" href="<%=request.getContextPath() %>/">
-		    </a>
+		  	<a class="navbar-item" id="logo" href="<%=request.getContextPath() %>/ "></a>
+		    
 		
 		    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 		      <span aria-hidden="true"></span>
@@ -78,7 +78,7 @@
 			    </div>
 				</div>
 				<div class="navbar-item has-dropdown is-hoverable single">
-			    	<a class="navbar-link">
+			    	<a class="navbar-link" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
 				      	관광안내
 				    </a>
 					<div class="navbar-dropdown single">

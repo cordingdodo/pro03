@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>회원 정보 수정</title>
+<title>회원 정보 상세보기</title>
 <jsp:include page="/head.jsp" />
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
@@ -24,7 +24,7 @@
 	    <div class="columns is-full">
 			<jsp:include page="../../admin/sidebar.jsp" />
 			<div class="column is-10">
-				<h2 class="title">회원 정보 확인 및 수정</h2>
+				<h2 class="title">회원 정보 확인</h2>
 				<form name="frm1" id="frm1" action="${path1 }/UserUpdateCtrl.do" method="post" onsubmit="return joinCheck(this)">
 					<table class="table">
 						<tbody>

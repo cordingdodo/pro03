@@ -14,6 +14,12 @@
     <title>공지사항 보기</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
+  <style>
+  table.table {
+    width: 1200px;
+    height: 300px;
+}
+  </style>
   <body>
   <jsp:include page="/header.jsp" />
   <section class="section">
