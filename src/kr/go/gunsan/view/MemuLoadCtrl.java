@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import kr.go.gunsan.dto.TourDTO;
 import kr.go.gunsan.model.TourDAO;
-import net.sf.json.JSONObject;
+import net.sf.json.*;
 
 @WebServlet("/MemuLoadCtrl.do")
 public class MemuLoadCtrl extends HttpServlet {
@@ -25,19 +25,23 @@ public class MemuLoadCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("sid");
+/*		HttpSession session = request.getSession();
+		String id = (String) session.getAttribute("sid");*/
 		
 		//dao에서 목록 불러오기 호출하여 반환받음
 		TourDAO dao = new TourDAO();
 		
 		ArrayList<TourDTO> data = dao.JSONPlaceList();
-		
+		/*for(int i=0;i<data.size();i++){
+			TourDTO dto = data.get(i);
+			System.out.println(dto.toString());
+		}*/
 		//dao로 부터 받은 데이터를 view에 디스패치함
 		PrintWriter out = response.getWriter();
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		request.setAttribute("data", data);
+		map.put("data", data);
 		
+		//System.out.println(map);
 		JSONObject json = new JSONObject();
 		json.putAll(map);
 		out.println(json.toString());

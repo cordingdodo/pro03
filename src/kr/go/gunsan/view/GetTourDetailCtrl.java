@@ -27,11 +27,11 @@ public class GetTourDetailCtrl extends HttpServlet {
 		
 		TourDAO dao = new TourDAO();
 		TourDTO dto = dao.DetailTour(no);
-		
+
 		ArrayList<PicDTO> picList = dao.JSONPicList(dto.getTourno());
-		
-		
+				
 		//dao로 부터 받은 데이터를 view에 디스패치함
+		request.setAttribute("picList", picList);
 		request.setAttribute("dto", dto);
 		
 		RequestDispatcher view = request.getRequestDispatcher("./tour/tourDetail.jsp");

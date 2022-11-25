@@ -87,6 +87,7 @@ public class TourDAO { //얘에 계속 추가하는 것임!
 				pic.setTourno(rs.getString("tourno"));
 				pic.setPicname(rs.getString("picname"));
 				pic.setPos(rs.getInt("pos"));
+				picList.add(pic);
 			}
 		} catch(ClassNotFoundException e){
 			System.out.println("드라이버 로딩 실패");

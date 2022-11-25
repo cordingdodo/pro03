@@ -24,7 +24,6 @@
 				      	관광
 				    </a>
 				    <div class="navbar-dropdown cate" id="cate01">
-				    
 				    </div>
 				</div>
 				<div class="navbar-item has-dropdown is-hoverable">
@@ -51,8 +50,8 @@
 				    
 				    </div>
 				</div>
-				<div href="${path2 }/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
-			    	<a class="navbar-link cate">
+				<div class="navbar-item has-dropdown is-hoverable">
+			    	<a href="${path2 }/GetTourCateListCtrl.do?cate=E" class="navbar-link cate">
 				      	숙박
 				    </a>
 		    		<div class="navbar-dropdown cate" id="cate05">
@@ -153,7 +152,9 @@
 			cache:false,
 			success:function(data){
 				$(".navbar-dropdown.cate").empty();
+				//var trans = data;
 				var trans = $.parseJSON(data);
+				console.log(trans);
 				$.each(trans, function(key, value){
 					if(key=="data"){
 						for(var i=0;i<value.length;i++){

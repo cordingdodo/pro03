@@ -37,7 +37,7 @@ public class Maria {
 	public static final String insertTour = "insert into tour(tourno, cate, place, comment1, comment2, addr) value(?, ?, ?, ?, ?, ?)";
 	public static final String File_Upload = "insert into pic(tourno, picname, pos) values (?,?,?)";
 	public static final String loadLastNo = "select no from tour order by no desc limit 1";
-	public static final String TOUR_ALL_LIST = "select * from tour ";
+	public static final String TOUR_ALL_LIST = "select * from tour";
 	public static final String Tour_DEL = "delete from tour where no=?";
 	public static final String tour_update = "update tour set tourno=?, cate=?, place=?, comment1=?, comment2=?, addr=? where no=?";
 	public static final String Tour_cate_List = "select a.no, a.tourno, a.cate, a.place, a.comment1, a.comment2, b.picname, b.pos from tour a inner join pic b on a.tourno=b.tourno where a.cate=? and b.pos=1";;

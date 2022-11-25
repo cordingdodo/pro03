@@ -62,17 +62,17 @@
       <h1 class="title">${dto.place } 상세보기</h1>
       	<div id="con">
       		<table class="table">
-      			<c:if test="${not empty list }">
+      			<c:if test="${not empty picList }">
       			<tr>
-				<c:forEach items="${list }" var="pic" varStatus="status">
+				<c:forEach items="${picList }" var="pic" varStatus="status">
 				<td>
-					<img src="upload/${pic.picname }" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<img src="${path1 }/upload/${pic.picname }" class="lazy" onerror="this.style.display='none'" alt="배너" />
 					<!-- onerror="this.style.display='none'"  -->
 	      		</td>
 				</c:forEach>	
 		    	</tr>
 		    	</c:if>
-				<c:if test="${empty list }">
+				<c:if test="${empty picList }">
 			    <tr>
 			    	<td>해당 이미지가 없습니다.</td>
 			    </tr>
